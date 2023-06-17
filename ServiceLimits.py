@@ -8,6 +8,7 @@ try:
     import oci
     import argparse
     import sys
+    from datetime import date
 except ModuleNotFoundError as err:
     # Error handling
     print(err)
@@ -51,6 +52,9 @@ except oci.exceptions.ServiceError as s:
 list_region_subscriptions_response = identity_client.list_region_subscriptions(tenancy_id=tenancy_id)
 tenancy = identity_client.get_tenancy(tenancy_id=tenancy_id)
 regions=(list_region_subscriptions_response.data)
+
+# Print Execution Time
+print (f'Script Executed on: {date.today()}')
 
 
 # Check for Default Region 

@@ -1,3 +1,7 @@
+'''
+https://docs.oracle.com/en-us/iaas/Content/Billing/Tasks/download-cost-usage-report.htm
+'''
+
 import oci
 import os
                                

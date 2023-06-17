@@ -28,12 +28,12 @@ summarize_metrics_data_response = monitoring_client.summarize_metrics_data(
 
 metrics_data = (summarize_metrics_data_response.data)
 
-for i in metrics_data:
-    # print (f'{i.dimensions}')
-    for j,k in i.dimensions.items():
-        if j != 'resourceDisplayName':
-            continue
-        print (j,k)
+# for i in metrics_data:
+#     # print (f'{i.dimensions}')
+#     for j,k in i.dimensions.items():
+#         if j != 'resourceDisplayName':
+#             continue
+#         print (j,k)
 
 
 a=[]
@@ -42,8 +42,9 @@ b=[]
 
 for i in metrics_data:
     # print (f'{i.dimensions}')
-    for j in i.aggregated_datapoints:
+    for j,k in i.aggregated_datapoints:
         a.append(j.timestamp)
         b.append(j.value)
+
 
 print (f'{a}')        
