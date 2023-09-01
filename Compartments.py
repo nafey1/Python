@@ -1,8 +1,9 @@
-################################################################################################################################
-## The script goes through all the Subscribed Regions and determines determines the availability domains
-## The script takes ONLY one command like argument, i.e; tenancy_ocid
-## Redirect the output to a tsv file as it can generate a tab-delimited file, for viewing in Excel
-###############################################################################################################################
+'''
+The script goes through all the Subscribed Regions and determines determines the availability domains
+The script takes ONLY one command line argument, tenancy_id
+Redirect the output to a tsv file as it can generate a tab-delimited file, for viewing in Excel
+'''
+
 try:
     import oci
     import argparse
@@ -121,8 +122,3 @@ if __name__ == "__main__":
     print(x)
     # Create a Tree like structure for compartments
     tree.show()
-
-
-
-
-
